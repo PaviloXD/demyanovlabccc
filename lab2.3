@@ -1,0 +1,10 @@
+phones = ["45-67-89", "12-34-56", "78-90-12", "23-45-67", "90-12-34"]
+
+for i in range(len(phones)):
+    min_idx = i
+    for j in range(i + 1, len(phones)):
+        if phones[j] < phones[min_idx]:
+            min_idx = j
+    phones[i], phones[min_idx] = phones[min_idx], phones[i]
+
+print(phones)
