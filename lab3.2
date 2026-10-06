@@ -1,0 +1,12 @@
+def f(a, b, step):
+    print(a)
+    if a != b:
+        f(a + step, b, step)
+
+a = int(input())
+b = int(input())
+
+if a < b:
+    f(a, b, 1)
+else:
+    f(a, b, -1)
