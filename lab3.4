@@ -1,0 +1,20 @@
+def delit(d, n):
+    if n % d == 0:
+        delit(d, n // d)
+    else:
+        f(d + 1, n)
+
+def f(d, n):
+    if d * d > n:
+        if n > 1:
+            print(n)
+        return
+    if n % d == 0:
+        print(d)
+        delit(d, n)
+    else:
+        f(d + 1, n)
+
+n = int(input())
+f(2, n)
+#без цикла while
